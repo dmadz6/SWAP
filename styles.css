@@ -1,0 +1,523 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default body styles - used for login page */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #1c1c1e;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 1.14286;
+    letter-spacing: .007em;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 1.16667;
+    letter-spacing: .009em;
+}
+
+
+/* Buttons */
+button, .button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0071e3;
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.17648;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    padding: 8px 16px;
+    border-radius: 980px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.login-button {
+    display: block;
+    margin: 0px auto 20px auto; /* Centers horizontally */
+    text-align: center;
+    padding: 8px 32px;
+    background-color: #3b3b42
+}
+
+
+
+button:hover, .button:hover {
+    background-color: #414147;
+}
+
+a {
+    color: #0071e3;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.text-center {
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #0000002d;
+    backdrop-filter: saturate(100%) blur(15px);
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand h1 {
+    color: #f5f5f7;
+    font-size: 21px;
+    margin: 0;
+}
+
+.navbar a {
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5f7;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 0 7px;
+    opacity: 1;
+    transition: opacity 0.3s;
+    
+}
+
+.navbar a:hover {
+    opacity: 1;
+}
+
+.school-logo {
+    height: 45px;
+    width: 45px;
+}
+
+
+/* Container and Cards */
+.container {
+    max-width: 1080px;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(90vh - 44px - 57px);
+    width: 90%;
+    margin: 30px auto;
+    padding: 60px;
+}
+
+/* card styling */
+.card {
+    background: #1c1c1e;
+    border-radius: 40px;
+    padding: 60px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.485);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 1080px;
+}
+
+.card:hover {
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.367);
+}
+
+/* Login card styling */
+.card.login {
+    background: #1c1c1e;
+    border-radius: 40px;
+    padding: 60px;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.485);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 600px;
+}
+
+/* Forms */
+.form-group {
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.label {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    line-height: 1.23536;
+    border: 1.6px solid #858585;
+    border-radius: 12px;
+    background-color: #1d1d1f;
+    color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"] {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 0.8px solid #858585;
+    margin-top: 10px;
+}
+
+input[type="password"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top: 0.8px solid #858585;
+    margin-bottom: 0px;
+}
+
+input[type="password"].reset_password {
+    border-top: 0.8px solid #858585;
+    margin-bottom: 0px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    font-family: 'Nunito Sans', sans-serif;
+    outline: none;
+    box-shadow: inset 0 0 0 2px #0066cc; /* Inner border effect */
+}
+
+.login-logo {
+    width: 190px;
+    height: auto;
+    display: block;
+    margin: -15px auto 20px;
+}
+
+
+/* Dashboard Grid */
+.card-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px); /* Adjust this as needed */
+    grid-template-rows: auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    padding-top: 20px;
+    align-self: center;
+    margin-top: auto;
+}
+
+/* Dashboard widget cards */
+.widget-card {
+    text-decoration: none;
+    background: #000000bf;
+    backdrop-filter: saturate(100%) blur(35px);
+    border-radius: 18px;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.485);
+}
+
+.widget-card:hover {
+    transform: scale(1.02);
+}
+
+.widget-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.widget-card p {
+    color: #c8c6c6;
+    font-size: 17px;
+}
+
+.welcome-message {
+    grid-column: 1 / -1;  /* Makes it span all columns */
+    text-align: center;
+    background: #000000bf;
+    backdrop-filter: saturate(100%) blur(35px);
+    padding: 25px 0;
+    border-radius: 18px;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.485);
+}
+
+
+.welcome-message h2 {
+    color: #ffffff;
+}
+
+.error-message {
+    background-color: #ffffff;
+    color: #c62828;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.error-message.faculty-dashboard {
+    grid-column: 1 / -1;  /* Makes it span all columns */
+    text-align: center;
+    margin-top:0px;
+}
+
+
+.success-message {
+    background-color: #ffffff;
+    color: #007900;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.error-message.login {
+    background-color: #ffffff;
+    color: #c62828;
+    padding: 20px;
+    margin-top: 0px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.success-message.login {
+    background-color: #ffffff;
+    color: #007900;
+    padding: 20px;
+    margin-top: 0px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+
+
+/* Tables */
+table {
+    width: 100%;
+    border: 1px solid #ffffff; /* Ensure table has a border */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+table th, table td {
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+    background: #232326;
+}
+
+
+
+/* Styles for the profile table */
+.profile-table th {
+    width: 30%; /* Set a narrower width for the first column */
+    background-color: #232326; /* Optional: Slightly lighter background for headers */
+    font-weight: bold;
+}
+
+.profile-table td {
+    width: 70%; /* Adjust the width for the second column */
+}
+
+/* Rounded corners for the profile table */
+.profile-table {
+    border-radius: 8px; /* Rounded corners for the entire table */
+    margin: 20px auto; /* Center the table with margin */
+}
+
+/* Footer styling */
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.33337;
+    margin-top: auto;
+    background: #0000002d;
+    backdrop-filter: saturate(100%) blur(15px);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff; /* Matches the card background color */
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: 1px solid #dee2e6; /* Border color similar to table cells */
+    font-family: 'Nunito Sans', sans-serif; /* Font consistency */
+}
+
+.modal-content p {
+    font-size: 16px; /* Matches body text size */
+    margin-bottom: 20px;
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Line height for readability */
+}
+
+.modal-content button {
+    font-family: 'Poppins', sans-serif; /* Matches button font */
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #0071e3; 
+    color: #fff; /* White text for contrast */
+    border: none;
+    border-radius: 4px; /* Rounded edges */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #0077ED; /* Hover color similar to buttons */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+        margin-top: 48px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .navbar {
+        padding: 0 0px;
+    }
+    
+    .navbar-brand h1 {
+        font-size: 18px;
+    }
+    
+    .card-grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    button, .button {
+        width: 100%;
+    }
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    position: fixed; /* Keeps the button in the same position in the viewport */
+    top: 90%; /* Adjust distance from the top of the viewport */
+    right: 3%; /* Distance from the right edge of the viewport */
+    z-index: 1000; /* Ensure it stays above other elements */
+    width: 60px; /* Set the button's width */
+    height: 60px; /* Set the button's height (same as width for circular shape) */
+    background-color: #113f84; /* Matches your theme */
+    color: #fff;
+    border-radius: 50%; /* Makes the button circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#scrollToTop:hover {
+    background-color: #0056b3;
+}
+
+#scrollToTop img {
+    width: 30px; /* Adjust the image size relative to the button */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Ensure clicks pass through the image to the button */
+}

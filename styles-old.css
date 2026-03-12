@@ -1,0 +1,371 @@
+/* General Reset and Body Styles */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #262a2e;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #f8f9fa;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+/* Buttons */
+button, .button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #113f84;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+    background-color: #0056b3;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+
+
+select {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    width: 1125px; /* Match the width of the input fields */
+    padding: 10px; /* Ensure consistent padding */
+    margin-bottom: 15px;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+select:hover {
+    background-color: #f0f0f0;
+    border-color: #686868;
+}
+
+
+select:focus {
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    background-color: #ffffff; /* White background when focused */
+}
+
+#scrollToTop {
+    position: fixed; /* Keeps the button in the same position in the viewport */
+    top: 68%; /* Adjust distance from the top of the viewport */
+    right: 3%; /* Distance from the right edge of the viewport */
+    z-index: 1000; /* Ensure it stays above other elements */
+    width: 60px; /* Set the button's width */
+    height: 60px; /* Set the button's height (same as width for circular shape) */
+    background-color: #113f84; /* Matches your theme */
+    color: #fff;
+    border-radius: 50%; /* Makes the button circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#scrollToTop:hover {
+    background-color: #0056b3;
+}
+
+#scrollToTop img {
+    width: 30px; /* Adjust the image size relative to the button */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Ensure clicks pass through the image to the button */
+}
+
+
+/* Inputs */
+input[type="text"], input[type="password"], textarea {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    width: 95%; /* Ensure consistency */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Containers */
+.container {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff; /* Matches the card background color */
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: 1px solid #dee2e6; /* Border color similar to table cells */
+    font-family: 'Nunito Sans', sans-serif; /* Font consistency */
+}
+
+.modal-content p {
+    font-size: 16px; /* Matches body text size */
+    margin-bottom: 20px;
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Line height for readability */
+}
+
+.modal-content button {
+    font-family: 'Poppins', sans-serif; /* Matches button font */
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #113f84; /* Matches navbar and buttons */
+    color: #fff; /* White text for contrast */
+    border: none;
+    border-radius: 4px; /* Rounded edges */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3; /* Hover color similar to buttons */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #113f84;
+    padding: 0px 20px;
+}
+
+.navbar a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #d3d3d3;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 0px;
+}
+
+.school-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 0px;
+}
+/* Styles for the profile table */
+.profile-table th {
+    width: 30%; /* Set a narrower width for the first column */
+    background-color: #f8f9fa; /* Optional: Slightly lighter background for headers */
+    font-weight: bold;
+}
+
+.profile-table td {
+    width: 70%; /* Adjust the width for the second column */
+}
+
+/* Rounded corners for the profile table */
+.profile-table {
+    border-radius: 8px; /* Rounded corners for the entire table */
+    margin: 20px auto; /* Center the table with margin */
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border: 1px solid #dee2e6; /* Ensure table has a border */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+/* Form Layout */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: #fff;
+    margin-top: auto;
+    width: auto;
+}
+
+/* General Layout Styles */
+.card-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    padding-top: 30px;
+    align-self: center;
+}
+
+.widget-card {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+    align-items: center;
+    margin: 0 auto;
+    width: 300px;
+    height: 145px;
+}
+
+.widget-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.widget-card p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.widget-card:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.widget-card:nth-child(4) {
+    grid-column: 2;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
